@@ -1,2 +1,2 @@
 #!/bin/bash
-grep phrase iacta
+tail -n+3 | head -1

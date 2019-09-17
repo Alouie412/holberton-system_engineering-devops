@@ -1,2 +1,2 @@
 #!/bin/bash
-printf "ibase=2;$BINARY\n" | bc
+printf "$((2#10100111001))\n"

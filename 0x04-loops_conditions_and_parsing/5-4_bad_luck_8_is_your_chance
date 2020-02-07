@@ -1,0 +1,2 @@
+#!/usr/bin/env bash
+# This script prints text 10 times. On the 4th loop, print "bad luck". On the 8th loop, print "good luck". Else, print "Holberton School"

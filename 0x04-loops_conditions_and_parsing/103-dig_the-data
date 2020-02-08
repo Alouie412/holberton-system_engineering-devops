@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+# This script parses through the Apache log, counts the number of occurence of a particular IP Address, and prints the IP Address and status code
+awk '{print $1, $9}' apache-access.log | sort | uniq -c | sort -nr

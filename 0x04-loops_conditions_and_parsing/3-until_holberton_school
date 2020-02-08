@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # This script prints out the word "Holberton School" 10 times using the until loop
-i=$1
-until [ "$i" -gt 9 ]
+i=1
+until [ "$i" -gt 10 ]
 do
 	echo "Holberton School"
 	((i++))

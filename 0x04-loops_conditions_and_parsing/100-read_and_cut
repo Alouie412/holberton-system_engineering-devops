@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+# This script cuts and reads certain columns in the file passwd, located in the etc directory
+while IFS= read -r line
+do
+	echo "$line" | cut -d ":" -f1,3,6
+done < "/etc/passwd"

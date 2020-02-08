@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # This script prints all the visible files in the current directory in list format, removing text before the first dash
-for output in $(ls)
+for output in *
 do
-	cut -d "-" -f 2 $output
+	echo "$output" | cut -d "-" -f2
 done

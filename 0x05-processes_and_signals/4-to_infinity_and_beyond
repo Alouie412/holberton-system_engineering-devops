@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+# This script deliberately causes an infinite loop. A beginner's "favorite"
+for ((i = 0; i < 10; i--))
+do
+	echo "To infinity and beyond"
+	sleep 2
+done

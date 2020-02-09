@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+# This script deliberately creates an infinite loop, as well as print another message when a certain signal is received
+trap 'echo "I am invincible!!!"' SIGTERM
+for ((i = 0; i < 10; i--))
+do
+	echo "To infinity and beyond"
+	sleep 2
+done

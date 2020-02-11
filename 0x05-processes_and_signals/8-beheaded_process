@@ -1,3 +1,3 @@
 #!/usr/bin/env bash
-# This script beheads 7-highlander. In other words, forcefully ends 7-highlander
+# This script beheads 7-highlander. In other words, forcefully ends 7-highlander.
 pkill -f --signal KILL "7-highlander"

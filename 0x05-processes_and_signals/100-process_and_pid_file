@@ -1,12 +1,12 @@
 #!/usr/bin/env bash
 # This script creates a file, then deliberately creates an infinite loop. Upon receiving certain signals, reacts to them
 
-echo $$ > /var/run/holbertonscript.pid
+sudo sh -c "echo $$ > /var/run/holbertonscript.pid"
 
 trap 'echo "Y U no love me?!"' SIGINT
 trap 'echo "I hate the kill command"' SIGTERM
-trap 'rm "/var/run/holbertonscript.pid"' SIGQUIT
-trap 'rm "/var/run/holbertonscript.pid"' SIGTERM
+trap 'pkill -f "100-process_and_pid_file" | sudo rm -r "/var/run/holbertonscript.pid"' SIGQUIT
+trap 'pkill -f "100-process_and_pid_file" | sudo rm -r "/var/run/holbertonscript.pid"' SIGTERM
 
 for ((i = 0; i < 10; i--))
 do

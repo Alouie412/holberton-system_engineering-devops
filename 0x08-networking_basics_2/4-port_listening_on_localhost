@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# This bash script listens in on a specific port connection, rather than try to connect to it
+
+sudo nc -lp 98

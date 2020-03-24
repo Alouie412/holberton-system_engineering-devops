@@ -1,7 +1,7 @@
 # This script creates a file and sets certain parameters using Puppet
 
 file {'/tmp/holberton':
-  ensure  => 'directory',
+  ensure  => file,
   owner   => 'www-data',
   group   => 'www-data',
   mode    => '0744',

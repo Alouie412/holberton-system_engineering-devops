@@ -1,5 +1,5 @@
 # This script executes a command using Puppet. In this case, kills a process
 
 exec {'killmenow':
-  command => '/usr/bin/pkill',
+  command => '/usr/bin/pkill killmenow',
 }

@@ -4,7 +4,13 @@
 sudo apt-get -y update
 sudo apt-get -y install nginx
 sudo ufw allow 'Nginx HTTP'
+
+# This allows editing of the file. Without this we would get a permission denied error
+sudo chmod 777 /etc/nginx/sites-available/default
 echo "Holberton School" > /var/www/html/index.nginx-debian.html
 sudo sed -i "/listen 80 default_server/a rewrite ^/redirect_me https://www.youtube.com/watch?v=QH2-TGUlwu4 permanent;" /etc/nginx/sites-available/default
 sudo sed -i "/listen 80 default_server/a add_header X-Served-By \$hostname;" /etc/nginx/sites-available/default
+
+# Revert the permission. 777 is bad
+sudo chmod 644 /etc/nginx/sites-available/default
 sudo service nginx restart

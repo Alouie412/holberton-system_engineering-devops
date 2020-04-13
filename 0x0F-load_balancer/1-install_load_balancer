@@ -6,19 +6,17 @@ sudo add-apt-repository ppa:vbernat/haproxy-1.7
 sudo apt-get update
 sudo apt-get install -y haproxy=1.7.\*
 
-sudo chmod 777 /etc/haproxy/haproxy.cfg
 # Everything inside echo is being fed to haproxy.cfg
 sudo echo "
-frontend front
+frontend http_front
   bind *:80
-  mode http
-  default_backend back
+  stats uri /haproxy?stats
+  default_backend http_back
 
-backend back
+backend http_back
   balance roundrobin
   server 866-web-01 35.237.159.185:80 check
   server 866-web-02 34.230.36.149:80 check
 " >> /etc/haproxy/haproxy.cfg
 
-sudo chmod 644 /etc/haproxy/haproxy.cfg
 sudo service haproxy restart

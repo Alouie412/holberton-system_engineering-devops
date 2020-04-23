@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+# This script makes a backup of the database to be stored somewhere else
+# by dumping the database to an sql file, then creating a tar.gz archive
+# on that file
+
+mysqldump -uroot -p "$1" --all-databases > backup.sql
+tar -czvf "$(date +%d-%m-%Y)".tar.gz backup.sql

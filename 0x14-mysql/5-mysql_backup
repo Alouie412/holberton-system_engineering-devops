@@ -3,5 +3,5 @@
 # by dumping the database to an sql file, then creating a tar.gz archive
 # on that file
 
-mysqldump -u root -p"$1" --all-databases > backup.sql
-tar czvf "$(date +%d-%m-%Y)".tar.gz backup.sql
+sudo mysqldump -u root -p"$1" --all-databases > backup.sql
+sudo tar czvf "$(date +%d-%m-%Y)".tar.gz backup.sql

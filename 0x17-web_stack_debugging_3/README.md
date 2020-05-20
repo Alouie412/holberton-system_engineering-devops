@@ -1,0 +1,1 @@
+This readme is very suspicious of strace's motives for wanting to be its friend.

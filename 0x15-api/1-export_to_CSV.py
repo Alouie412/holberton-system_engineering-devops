@@ -3,8 +3,8 @@
 This script extracts information from the given API and saves it as
 a csv file
 """
-import requests
 import csv
+import requests
 from sys import argv
 
 

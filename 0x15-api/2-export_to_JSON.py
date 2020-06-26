@@ -3,8 +3,8 @@
 This script extracts information from the given API and saves it as
 a JSON file
 """
-import requests
 import json
+import requests
 from sys import argv
 
 
